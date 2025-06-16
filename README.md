@@ -1,6 +1,6 @@
 # Welcome App 🌐
 
-A simple mobile-style web application built using **HTML**, **CSS**, and **JavaScript**, developed as part of Task 1 of my internship at **ApexPlanet Software Pvt. Ltd.**
+A simple mobile-style web application built using **HTML**, **CSS**, and **JavaScript**, developed as part of Task  of my internship at **ApexPlanet Software Pvt. Ltd.**
 
 ---
 
