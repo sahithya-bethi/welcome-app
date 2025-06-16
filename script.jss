@@ -1,15 +1,33 @@
-<<<<<<< HEAD
-function showProfile() {
-  document.getElementById("home-screen").classList.remove("active");
-  document.getElementById("profile-screen").classList.add("active");
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function displayTasks() {
+  const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    li.className = task.done ? "completed" : "";
+    li.innerHTML = `
+      ${task.name}
+      <button onclick="toggleTask(${index})">✔️</button>
+    `;
+    taskList.appendChild(li);
+  });
 }
 
-function showHome() {
-  document.getElementById("profile-screen").classList.remove("active");
-  document.getElementById("home-screen").classList.add("active");
+function addTask() {
+  const input = document.getElementById("taskInput");
+  if (input.value.trim() !== "") {
+    tasks.push({ name: input.value, done: false });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    input.value = "";
+    displayTasks();
+  }
 }
-=======
-function greet() {
-  document.getElementById("output").innerText = "Great start, Sahithya! 🚀";
+
+function toggleTask(index) {
+  tasks[index].done = !tasks[index].done;
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  displayTasks();
 }
->>>>>>> e9efdbe2975342fa28fc8a9dde28392c186946b0
+
+displayTasks();
