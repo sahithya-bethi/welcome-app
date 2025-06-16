@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f6f8;
@@ -32,3 +33,18 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+=======
+body {
+  text-align: center;
+  margin-top: 100px;
+  font-family: sans-serif;
+  background: #f0f4f8;
+}
+button {
+  padding: 10px 20px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+>>>>>>> e9efdbe2975342fa28fc8a9dde28392c186946b0
