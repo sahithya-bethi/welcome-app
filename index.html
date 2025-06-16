@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Welcome App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>👋 Hello Sahithya!</h1>
-  <p>Welcome to your first app!</p>
-  <button onclick="greet()">Click Me</button>
-  <p id="output"></p>
+
+  <!-- Home Screen -->
+  <div id="home-screen" class="screen active">
+    <h1>👋 Hello Sahithya!</h1>
+    <p>Welcome to your app</p>
+    <button onclick="showProfile()">Go to Profile</button>
+  </div>
+
+  <!-- Profile Screen -->
+  <div id="profile-screen" class="screen">
+    <h1>👤 Profile</h1>
+    <p>Name: Sahithya</p>
+    <p>Role: Intern - UI Designer</p>
+    <button onclick="showHome()">Back to Home</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
-
